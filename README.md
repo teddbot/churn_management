@@ -23,36 +23,42 @@ Now, let’s talk about what our system actually does. We broke the project into
 1. Predicting Who Might Leave
 We fed our system a bunch of customer data (like how often they use the service and how much they spend) to train it to spot patterns.
 Then, it uses this pattern to predict which customers are likely to stop using the service.
+
 2. Offering Special Deals to Keep Them
 Once our system predicts who might leave, it assigns them a special offer or discount to encourage them to stay.
 We looked at each customer's spending and chose the best deal we could offer without hurting the company’s revenue.
+
 3. Sending a Personalized Message
 Initially, we thought about using an advanced AI model to create friendly, personalized messages for each customer. However, since we did not have access to a paid AI model in time, we decided to keep things simple.
 Instead, we now use a default, friendly message for all customers, which says:
 "Dear subscriber, we have an exclusive offer just for you: [Offer Name]! Stay connected with us for more amazing benefits."
 
 4. Measuring How Well It Works
-Next, we wanted to see if our offers were actually working. To do this, we added a part that simulates whether a customer accepts the offer. For now, this is a random “yes” or “no” since we don’t have real customer responses.
+Next, we wanted to see if our offers were working. To do this, we added a part that simulates whether a customer accepts the offer. For now, this is a random “yes” or “no” since we don’t have real customer responses.
 The system then calculates some key numbers:
-Retention Rate: How many customers we managed to keep.
-Accepted Offers: How many people took up our deals.
+Retention Rate: How many customers we managed to keep?
+Accepted Offers: How many people took up our deals?
 Average Spending: How much these customers spend after accepting our offers.
+
 5. Real-Time Reporting via Email
-Finally, we set up the system to send an email report with all the results. The email includes things like how many offers were sent, how many were accepted, and the retention rate. It also attaches an Excel file with all the details so that it’s easy to review.
+Finally, we set up the system to send an email report with all the results. The email includes how many offers were sent, how many were accepted, and the retention rate. It also attaches an Excel file with all the details so it’s easy to review.
 Part 4: Running It on Our Laptop
-After setting all this up, we can now run everything right on our laptop. Here’s how it works:
+After setting everything up, we can run everything right on our laptop. Here’s how it works:
 
 We open our terminal (like the command center on our laptop).
 Type the command:
-css
-Copy code
+
 python main.py
+
 The system runs through the whole process:
+
 Predicts who might leave.
 Assigns offers.
 Creates friendly messages.
 Measures if the intervention worked.
 Sends a detailed email report.
+
+
 Key Takeaways
 We made a system that helps keep customers from leaving by predicting churn and offering special deals.
 We send a friendly message to communicate effectively to customers.
